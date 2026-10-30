@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-nexora-bg font-sans text-nexora-text antialiased;
+  }
+
+  ::selection {
+    @apply bg-nexora-accent/30 text-white;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-nexora-accent;
+  }
+}
+
+@layer components {
+  .container-shell {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  .section-pad {
+    @apply py-20 sm:py-24 lg:py-28;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.22em] text-nexora-accent;
+  }
+
+  .heading-display {
+    @apply font-display font-semibold tracking-tight text-white text-balance;
+  }
+
+  .text-body {
+    @apply text-nexora-muted leading-relaxed;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-white/10 bg-nexora-card transition duration-300 ease-soft;
+  }
+
+  .surface-card-hover:hover {
+    @apply border-nexora-accent/30 shadow-glow-sm -translate-y-1;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-nexora-accent px-5 py-3 text-sm font-semibold text-nexora-bg transition duration-300 ease-soft hover:bg-[#b8f04a] hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nexora-accent;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-5 py-3 text-sm font-semibold text-white transition duration-300 ease-soft hover:border-nexora-accent/40 hover:bg-nexora-accent/10 hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-1.5 text-sm font-medium text-nexora-muted transition hover:text-nexora-accent;
+  }
+
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-nexora-surface px-4 py-3 text-sm text-white placeholder:text-nexora-muted/60 transition focus:border-nexora-accent/50 focus:outline-none focus:ring-1 focus:ring-nexora-accent/40;
+  }
+
+  .field-error {
+    @apply border-red-400/50 focus:border-red-400/60 focus:ring-red-400/30;
+  }
+
+  .label {
+    @apply mb-2 block text-sm font-medium text-white;
+  }
+
+  .tech-chip {
+    @apply inline-flex items-center rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-nexora-muted;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
