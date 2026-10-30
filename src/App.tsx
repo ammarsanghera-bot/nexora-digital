@@ -9,7 +9,7 @@ import { PrivacyPage } from './pages/Privacy'
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/nexora-digital">
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<HomePage />} />
